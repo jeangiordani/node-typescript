@@ -16,7 +16,7 @@ export default function authMiddleware(
   const { authorization } = req.headers;
 
   if (!authorization) {
-    throw new HttpException(401, 'No token found');
+    throw new HttpException(401, 'No token found.');
   }
 
   const [, token] = authorization.split(' ');
