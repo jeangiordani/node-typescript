@@ -6,12 +6,16 @@ import UserServiceContract from '../services/contracts/UserServiceContract';
 
 class UserController {
   private userService: UserServiceContract;
-  
+
   constructor(userService: UserServiceContract) {
     this.userService = userService;
   }
 
-  async store(req: Request, res: Response, next: NextFunction) {
+  async store(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response> {
     try {
       const { email, password } = req.body;
 
