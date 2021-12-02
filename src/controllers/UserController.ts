@@ -6,6 +6,7 @@ import UserServiceContract from '../services/contracts/UserServiceContract';
 
 class UserController {
   private userService: UserServiceContract;
+  
   constructor(userService: UserServiceContract) {
     this.userService = userService;
   }
