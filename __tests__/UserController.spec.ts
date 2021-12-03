@@ -134,36 +134,3 @@ describe('UserController', () => {
     );
   });
 });
-
-// const mockRequest = {
-//     body: {
-//       email: 'teste@teste.com',
-//       password: '12345',
-//     },
-//   } as Request;
-
-//   const mockResponse: any = {
-//     json: jest.fn(),
-//     status: jest.fn(),
-//   };
-
-// userService.createUser.mockImplementationOnce(
-//   (email: string, password: string) => {
-//     return {
-//       id: '1',
-//       email,
-//     } as any;
-//   }
-// );
-
-//   const mockRequest = {
-//     body: {
-//       email: 'teste@teste.com',
-//       password: '12345',
-//     },
-//   } as Request;
-
-//   const mockResponse: any = {
-//     json: jest.fn(),
-//     status: jest.fn(),
-//   };
