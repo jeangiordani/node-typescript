@@ -21,7 +21,7 @@ class UserController {
 
       const user = await this.userService.createUser(email, password);
 
-      return res.json({ data: user });
+      return res.status(201).json({ data: user });
     } catch (error) {
       next(error);
     }
@@ -30,7 +30,7 @@ class UserController {
   async index(req: Request, res: Response): Promise<Response<User>> {
     const users = await this.userService.findAll();
 
-    return res.json({ data: users });
+    return res.status(200).json({ data: users });
   }
 }
 

@@ -9,6 +9,10 @@ const router = Router();
 
 router.use(errorMiddleware);
 
+router.get('/', (req, res) => {
+  res.json({ message: 'Hello world' });
+});
+
 router.use(authRouter);
 router.use(userRouter);
 

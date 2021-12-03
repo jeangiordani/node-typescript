@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "npx nodemon --exec ts-node --files src/index.ts",
+    "dev": "npx nodemon --exec ts-node --files src/server.ts",
     "typeorm": "npx ts-node ./node_modules/typeorm/cli.js",
-    "test": "jest --maxWorkers=50%"
+    "test": "jest --detectOpenHandles --verbose"
   },
   "devDependencies": {
     "@jest-mock/express": "^1.4.5",
@@ -14,10 +14,12 @@
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.3",
     "@types/jsonwebtoken": "^8.5.6",
-    "class-transformer": "^0.5.1",
+    "@types/supertest": "^2.0.11",
     "jest": "^27.4.3",
+    "jest-mock-extended": "^2.0.4",
     "joi": "^17.5.0",
     "nodemon": "^2.0.15",
+    "supertest": "^6.1.6",
     "ts-custom-error": "^3.2.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",

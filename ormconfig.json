@@ -1,18 +1,32 @@
-{
-   "type": "mysql",
-   "host": "localhost",
-   "port": 3306,
-   "username": "root",
-   "password": "9177",
-   "database": "teste_user",
-   "logging": false,
-   "entities": [
-      "src/models/*.ts"
-   ],
-   "migrations": [
-      "src/database/migrations/*.ts"
-   ],
-   "cli": {
-        "migrationsDir": "src/database/migrations"
+[
+  {
+    "name": "default",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "9177",
+    "database": "teste_user",
+    "logging": false,
+    "entities": ["src/models/*.ts"],
+    "migrations": ["src/database/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "src/database/migrations"
     }
-}
+  },
+  {
+    "name": "testing",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "9177",
+    "database": "teste_user_test",
+    "logging": false,
+    "entities": ["src/models/*.ts"],
+    "migrations": ["src/database/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "src/database/migrations"
+    }
+  }
+]

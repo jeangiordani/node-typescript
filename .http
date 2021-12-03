@@ -2,18 +2,19 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-    "email": "sample1@email.com",
+    "email": "sample4@teste.com",
     "password": ""
 }
 
-# POST http://localhost:3000/auth HTTP/1.1
-# content-type: application/json
+POST http://localhost:3000/auth HTTP/1.1
+content-type: application/json
 
-# {
-#     "email": "sample1@email.com",
-#     "password": "12345"
-# }
+{
+    "email": "sample1@email.com",
+    "password": "12345"
+}
 
-# GET http://localhost:3000/users HTTP/1.1
-# content-type: application/json
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNjM4NDA4NDUwLCJleHAiOjE2Mzg0OTQ4NTB9.7WN0pBaI1C2z5Qs5dg2n_MLccR69_5Hvu8Dn4eMg-T8
+GET http://localhost:3000/users HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNjM4NDk0OTY5LCJleHAiOjE2Mzg1ODEzNjl9.bUVzaAtaA65kYA2UgneSHZDCnV9eAQrBxXQPYO5JcTY
+

@@ -6,9 +6,11 @@ import { validators } from '../schemas';
 function validatorMiddleware(validator: Joi.ObjectSchema<any>) {
   return function (req: Request, res: Response, next: NextFunction) {
     const validated = validator.validate(req.body);
-
     if (validated.error) {
-      throw new HttpException(422, validated.error.message);
+      let str = validated.error.message.replace('"', '');
+      str = str.replace('"', '');
+
+      throw new HttpException(422, str);
     }
     try {
       next();
